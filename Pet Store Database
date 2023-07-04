@@ -1,0 +1,26 @@
+Create a pet store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, brand TEXT, quantity INTEGER, price NUMERIC, location TEXT);
+
+INSERT INTO store VALUES
+(1, "dog food", "purina", 100, 12.99, "aisle 2"),
+(2, "leash", "pawsitively pup", 24, 20.35, "aisle 4"),
+(3, "kitty litter", "world's best cat litter", 35, 35.00, "aisle 3"),
+(4, "kitten food, dry", "pedigree", 50, 15.99, "aisle 3"),
+(5, "kitten food, wet", "cats gone wild", 43, 19.75, "aisle 3"),
+(6, "puppy collar", "good dog", 85, 16.99, "aisle 4"),
+(7, "medium collar", "good dog", 72, 18.99, "aisle 4"),
+(8, "large collar", "good dog", 68, 20.99, "aisle 4"),
+(9, "xtra large collar", "good dog", 74, 22.99, "aisle 4"),
+(10, "small collar", "good dog", 52, 16.99, "aisle 4"),
+(11, "xtra small collar", "good dog", 67, 14.99, "aisle 4"),
+(12, "catnip", "frisky kitty", 18, 24.85, "aisle 3"),
+(13, "tennis ball", "dogs r us", 1500, 6.99, "aisle 10"),
+(14, "puppy pads", "call of the wild", 16, 20.35, "aisle 3"),
+(15, "treats", "pup pup hooray", 36, 14.99, "aisle 10");
+
+Display the database order by aisle
+SELECT * FROM store ORDER BY location DESC;
+
+Display sum of price column
+SELECT SUM(price) FROM store;
